@@ -1,0 +1,35 @@
+.home-bg {
+  height: 100%;
+}
+
+.banner {
+  height: 80%;
+  background-color: #fefae0;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.banner-text {
+  width: 50vw;
+}
+
+.banner-text p {
+  font-size: 20px;
+  color: #dda15e;
+}
+
+.banner-text h1 {
+  font-size: 100px;
+  padding-bottom: 20px;
+  color: #bc6c25;
+}
+
+.banner-text button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #6f1d1b;
+  margin-top: 20px;
+  color: white;
+  font-weight: 600;
+}
