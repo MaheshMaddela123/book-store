@@ -1,49 +1,52 @@
+//react
+import { Link } from "react-router";
+import { Triangle } from "react-loader-spinner";
+
+//icons
 import { FaRegStar, FaRegEye } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
+import { FaStarHalfStroke } from "react-icons/fa6";
 import { MdOutlineFavoriteBorder, MdOutlineShuffle } from "react-icons/md";
 
+//style
 import "./index.css";
 
-const BookItem = () => {
+const BookItem = ({ bookObj }) => {
+  const { title, price, rating, description, imageUrl } = bookObj;
   return (
-    <article className="card">
-      <img
-        src="https://m.media-amazon.com/images/I/81tNnqcHxlL._AC_UF1000,1000_QL80_.jpg"
-        className="book-img"
-        alt="book_imgs"
-      />
-      <div className="card-text">
-        <h1>Sharlock hOMES</h1>
-        <h3>₹ 65</h3>
-        <div>
-          <FaRegStar />
-          <FaRegStar />
-        </div>
-        <p className="card-para">
-          Headline: Elementary, My Dear Reader: Dive into the World of Sherlock
-          Holmes Step into the foggy streets of Victorian London with the
-          world’s most famous consulting detective. Created by Sir Arthur Conan
-          Doyle, Sherlock Holmes redefined literature with his unparalleled
-          powers of observation, deductive reasoning, and bohemian eccentricity.
-          Alongside his loyal biographer, Dr. John Watson, Holmes tackles
-          baffling mysteries—from stolen treasures to chilling murders—that
-          Scotland Yard cannot solve. Explore our curated collection of novels,
-          short story anthologies, and definitive box sets, and discover why the
-          game is still afoot over a century later.
-        </p>
-        <button>This button</button>
-        <span>
-          <div className="icons-bg">
-            <MdOutlineFavoriteBorder />
+    <li className="li-data">
+      <Link className="link-data">
+        <article className="card">
+          <img src={imageUrl} className="book-img" alt="book_imgs" />
+          <div className="card-text">
+            <h1>{title}</h1>
+            <h3>₹ {price}</h3>
+            <div className="star-cont">
+              <FaStar className="star" />
+              <FaStar className="star" />
+              <FaStar className="star" />
+              <FaStar className="star" />
+              <FaStarHalfStroke className="star" />
+            </div>
+            <p className="card-para">{description}</p>
+            <div className="button-icons-row">
+              <button className="add-to-cart-btn">Add to Cart</button>
+              <span className="icons-cont">
+                <span className="icons-bg">
+                  <MdOutlineFavoriteBorder className="icon" />
+                </span>
+                <span className="icons-bg">
+                  <MdOutlineShuffle className="icon" />
+                </span>
+                <span className="icons-bg">
+                  <FaRegEye className="icon" />
+                </span>
+              </span>
+            </div>
           </div>
-          <div className="icons-bg">
-            <MdOutlineShuffle />
-          </div>
-          <div className="icons-bg">
-            <FaRegEye />
-          </div>
-        </span>
-      </div>
-    </article>
+        </article>
+      </Link>
+    </li>
   );
 };
 

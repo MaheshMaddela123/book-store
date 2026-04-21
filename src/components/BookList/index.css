@@ -7,3 +7,27 @@
 .book-info {
   list-style-type: none;
 }
+
+.search-input-cont {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 20px 10px 0px;
+  margin-right: 40px;
+}
+
+.search-input {
+  width: 250px;
+  height: 30px;
+  /* border-radius: 15px; */
+  border: 1px solid #7f4f24;
+  padding-left: 15px;
+  color: #582f0e;
+}
+
+.search-btn {
+  background-color: #7f4f24;
+  color: #c2c5aa;
+  border: none;
+  width: 40px;
+  font-size: 20px;
+}
