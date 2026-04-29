@@ -1,6 +1,5 @@
 //react
 import { Link } from "react-router";
-import { Triangle } from "react-loader-spinner";
 
 //icons
 import { FaRegStar, FaRegEye } from "react-icons/fa6";
@@ -12,10 +11,10 @@ import { MdOutlineFavoriteBorder, MdOutlineShuffle } from "react-icons/md";
 import "./index.css";
 
 const BookItem = ({ bookObj }) => {
-  const { title, price, rating, description, imageUrl } = bookObj;
+  const { title, price, rating, description, imageUrl, uniqueId } = bookObj;
   return (
     <li className="li-data">
-      <Link className="link-data">
+      <Link className="link-data" to={"/books/" + uniqueId}>
         <article className="card">
           <img src={imageUrl} className="book-img" alt="book_imgs" />
           <div className="card-text">
